@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body{
+  font-family: "Poppins",sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+span{
+  color: var(--hover-color);
+}
