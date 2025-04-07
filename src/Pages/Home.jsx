@@ -58,7 +58,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center sm:justify-start">
             <a
-              href="/download-cv"
+              href="https://red-millisent-26.tiiny.site"
               className="px-6 py-2 rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300"
             >
               Download CV
