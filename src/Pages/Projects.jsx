@@ -26,11 +26,11 @@ const projects = [
     codeLink: "#",
   },
   {
-    title: "Hospital Management",
+    title: "First Portfolio",
     description:
       "An application to manage patient records, appointments, and medical history using React and MSSQL.",
     technologies: ["React", "MVC", "JavaScript", "MSSQL"],
-    demoLink: "#",
+    demoLink: "https://stellular-shortbread-b6338a.netlify.app/",
     codeLink: "#",
   },
   {

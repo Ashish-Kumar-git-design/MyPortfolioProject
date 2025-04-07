@@ -1,8 +1,38 @@
 import image from "../image/my3image.jpg";
-
+import { useState, useEffect } from "react";
 import React from "react";
 
 const Home = () => {
+  const texts = ["Ashish Kumar", "Web Developer", "Coder", "Data Analyst"];
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [isForward, setIsForward] = useState(true);
+  const [textIndex, setTextIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = texts[textIndex];
+    const interval = setInterval(() => {
+      setDisplayText(currentText.substring(0, charIndex));
+
+      if (isForward) {
+        if (charIndex < currentText.length) {
+          setCharIndex((prev) => prev + 1);
+        } else {
+          setTimeout(() => setIsForward(false), 1000);
+          clearInterval(interval);
+        }
+      } else {
+        if (charIndex > 0) {
+          setCharIndex((prev) => prev - 1);
+        } else {
+          setIsForward(true);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [charIndex, isForward, textIndex]);
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500">
       {/* Background Gradient */}
@@ -18,7 +48,7 @@ const Home = () => {
         {/* Left Side: Description */}
         <div className="sm:w-1/2 text-white space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight  text-5xl font-extrabold bg-gradient-to-r from-yellow-300 via-green-500 to-yellow-500 bg-clip-text text-transparent">
-            Hi, I'm <span className="text-yellow-300">Ashish Kumar</span>
+            Hi, I'm <span className="text-yellow-300">{displayText}</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed">
             I am a passionate web developer with experience in building scalable
