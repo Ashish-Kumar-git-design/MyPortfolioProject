@@ -18,11 +18,11 @@ const projects = [
     codeLink: "#",
   },
   {
-    title: "Library Management",
+    title: "Counter App",
     description:
       "A web application for managing library books, members, and lending systems using React, MVC, and MSSQL.",
     technologies: ["React", "MVC", "JavaScript", "MSSQL"],
-    demoLink: "#",
+    demoLink: "../SomeTaskApp/Counter",
     codeLink: "#",
   },
   {
