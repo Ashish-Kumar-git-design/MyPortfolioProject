@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="fixed w-full top-0 z-40 dark:bg-[rgba(252,250,250,0.8)] bg-[rgba(10,10,10,0.8)]backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav className="fixed w-full top-0 z-40 bg-black/40 dark:bg-white/40 backdrop-blur-2xl border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="font-mono text-xl text-white dark:text-black">
