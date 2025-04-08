@@ -33,8 +33,9 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, [charIndex, isForward, textIndex]);
+
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500">
+    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-blue-900">
       {/* Background Gradient */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
@@ -47,7 +48,7 @@ const Home = () => {
       <div className="relative z-10 max-w-6xl mx-auto p-6 text-center lg:text-left flex flex-col sm:flex-row items-center">
         {/* Left Side: Description */}
         <div className="sm:w-1/2 text-white space-y-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight  text-5xl font-extrabold bg-gradient-to-r from-yellow-300 via-green-500 to-yellow-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-green-500 to-yellow-500 bg-clip-text text-transparent">
             Hi, I'm <span className="text-yellow-300">{displayText}</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed">

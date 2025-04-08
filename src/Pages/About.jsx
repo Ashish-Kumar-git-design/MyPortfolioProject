@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const About = () => {
   const [activeSection, setActiveSection] = useState("education");
 
-  // Education Data
   const education = [
     {
       degree: "Bachelor of Computer Science",
@@ -25,7 +24,6 @@ const About = () => {
     },
   ];
 
-  // Skills Data with predefined percentage
   const skills = [
     { name: "React", percentage: 90 },
     { name: "JavaScript", percentage: 85 },
@@ -43,7 +41,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 px-6 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white"
+      className="py-16 px-6 bg-gradient-to-r from-gray-900 to-blue-800 text-white dark:from-blue-900 dark:to-yellow-600 dark:text-[#ecc8c8]"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-10">About Me</h2>
@@ -78,12 +76,14 @@ const About = () => {
           excited to bring that mindset to every project I take on.
         </p>
 
-        {/* Navigation to Switch Between Education and Skills */}
+        {/* Tab Buttons */}
         <div className="flex justify-center space-x-6 mb-10">
           <button
             onClick={() => setActiveSection("education")}
             className={`text-lg font-semibold transition-all duration-300 ${
-              activeSection === "education" ? "text-yellow-400" : "text-white"
+              activeSection === "education"
+                ? "text-yellow-300"
+                : "text-white dark:text-[#a8ff60]"
             }`}
           >
             Education
@@ -91,7 +91,9 @@ const About = () => {
           <button
             onClick={() => setActiveSection("skills")}
             className={`text-lg font-semibold transition-all duration-300 ${
-              activeSection === "skills" ? "text-yellow-400" : "text-white"
+              activeSection === "skills"
+                ? "text-yellow-300"
+                : "text-white dark:text-[#a8ff60]"
             }`}
           >
             Skills
@@ -104,12 +106,12 @@ const About = () => {
             {education.map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-800 rounded-lg hover:shadow-xl transition-all duration-300"
+                className="p-6 bg-gray-800 text-white rounded-lg hover:shadow-2xl transition-all duration-300 dark:bg-gray-200 dark:text-gray-900"
               >
                 <h3 className="text-2xl font-bold mb-2">{item.degree}</h3>
                 <p className="text-lg">{item.year}</p>
-                <p className="text-gray-400">{item.university}</p>
-                <p className="text-gray-400">{item.percentage}</p>
+                <p className="dark:text-gray-800">{item.university}</p>
+                <p className="dark:text-gray-800">{item.percentage}</p>
               </div>
             ))}
           </div>
@@ -124,9 +126,9 @@ const About = () => {
                   <p className="text-lg font-semibold">{skill.name}</p>
                   <p className="text-lg">{skill.percentage}%</p>
                 </div>
-                <div className="w-full bg-gray-700 h-2 rounded-full">
+                <div className="w-full bg-gray-300 h-2 rounded-full dark:bg-gray-700">
                   <div
-                    className={`h-2 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full transition-all duration-500`}
+                    className="h-2 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full transition-all duration-500"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>
