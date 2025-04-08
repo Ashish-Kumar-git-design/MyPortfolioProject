@@ -47,7 +47,7 @@ const Home = () => {
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto p-6 text-center lg:text-left flex flex-col sm:flex-row items-center">
         {/* Left Side: Description */}
-        <div className="sm:w-1/2 text-white space-y-6">
+        <div className="sm:w-1/2 pt-10 text-white space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-green-500 to-yellow-500 bg-clip-text text-transparent">
             Hi,
             <br /> I'm <span className="text-yellow-300">{displayText}</span>
