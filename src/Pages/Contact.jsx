@@ -66,7 +66,7 @@ const Contact = () => {
               value={formData.message}
               required
               rows={5}
-              className="w-full bg-transparent border border-white dark:border-black rounded px-4 py-3 text-white dark:text-black transition focus:outline-none focus:border-green-300 dark:focus:border-black"
+              className="w-full bg-transparent border border-white dark:border-black rounded px-4 py-3 text-black dark:text-white transition focus:outline-none focus:border-green-300 dark:focus:border-black"
               placeholder="Your Message..."
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })

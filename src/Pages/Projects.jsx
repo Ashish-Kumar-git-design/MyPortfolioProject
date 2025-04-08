@@ -81,7 +81,7 @@ const projects = [
 const Project = () => {
   return (
     <section
-      className="py-16 px-6 dark:bg-gray-100 bg-gradient-to-r from-gray-700 to-indigo-900"
+      className="py-16 px-6 pt-25 dark:bg-gray-100 bg-gradient-to-r from-gray-700 to-indigo-900"
       id="projects"
     >
       <h2 className="text-4xl font-bold text-center mb-12 dark:text-white-900 text-gray-100">

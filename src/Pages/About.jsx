@@ -41,7 +41,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 px-6 bg-gradient-to-r from-gray-900 to-blue-800 text-white dark:from-blue-900 dark:to-yellow-600 dark:text-[#ecc8c8]"
+      className="py-16 px-6 bg-gradient-to-r pt-25 from-gray-900 to-blue-800 text-white dark:from-blue-900 dark:to-yellow-600 dark:text-[#ecc8c8]"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-10">About Me</h2>

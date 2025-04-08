@@ -49,7 +49,8 @@ const Home = () => {
         {/* Left Side: Description */}
         <div className="sm:w-1/2 text-white space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-green-500 to-yellow-500 bg-clip-text text-transparent">
-            Hi, I'm <span className="text-yellow-300">{displayText}</span>
+            Hi,
+            <br /> I'm <span className="text-yellow-300">{displayText}</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed">
             I am a passionate web developer with experience in building scalable
@@ -65,7 +66,7 @@ const Home = () => {
               Download CV
             </a>
             <a
-              href="/contact"
+              href="http://localhost:5174/contact"
               className="px-6 py-2 rounded-full text-white bg-pink-600 hover:bg-pink-700 transition-all duration-300"
             >
               Contact Me
